@@ -1,4 +1,4 @@
-# Dating Greek Papyri with Text Regression: The `PaDoc` Dataset
+# Dating Greek Papyri with Text Regression
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 This is a dataset comprising the transcriptions from 389 manuscripts, dated from the 3rd century BCE to the 7th century CE, originating mainly from Greco-Roman Egypt. A study, titled "__Dating Greek Papyri with Text Regression__" and introducing this dataset, was presented as a long article at ACL 2023 in Toronto, Canada. You may [access the study online](https://aclanthology.org/2023.acl-long.556), watch [the recorded presentation](https://aclanthology.org/2023.acl-long.556.mp4), or read the abstract: 
