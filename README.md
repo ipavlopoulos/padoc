@@ -9,16 +9,29 @@ We created a dataset of 389 transcriptions of documentary Greek papyri, dated fr
 
 Some of our estimations fall far away from the (red) upper limit while others fall close. The estimated date should be read along with other information (in the shared corpus), such as the place settlement. We observe, for example, that in some places the estimated dates fall closer to the upper limit (e.g., in Oxyrhynchos and Tebtynis the distance is 132 years) compared to others (e.g., in Antinoopolis and Hermopolis the distance is 283 and 384 years). See Section 7.2 of the paper for more details.
 
-To access the data, you can download the repository and run the following code in Python (also in a notebook in the repo):
+## Data access
+
+To access the data run the following code in Python (also in a notebook in the repo):
 
 ```python
+# clone the repository
+# !git clone https://github.com/ipavlopoulos/padoc.git
 import pandas as pd
+padoc = pd.read_csv("padoc/data/padoc389.csv")
+padoc.sample(3)
+```
+
+To access the date estimations, run the following (the notebook also shows code to reproduce the diagram):
+
+```python
 wild = pd.read_csv('data/in_the_wild.csv')
 norm = lambda x: x if str(x)=="4" else int(str(x)[:5]) if str(x).startswith("-") else int(str(x)[:4])
 wild["by"] = wild.Date_notAfter.apply(norm)
 wild = wild.sort_values(by="by", ascending=False)
 wild.sample()
 ```
+
+## Citation
 
 The study was presented as a long article at ACL 2023 in Toronto, Canada. You may access it online [https://aclanthology.org/2023.acl-long.556](https://aclanthology.org/2023.acl-long.556) or watch [the recorded presentation](https://aclanthology.org/2023.acl-long.556.mp4). 
 
